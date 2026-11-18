@@ -163,3 +163,5 @@ body {
 @media(min-width:1600px){.section-space{padding-left:90px;padding-right:90px}}
 @media(max-width:800px){.site-header{height:90px}.site-header nav{justify-content:flex-end;gap:32px}.exhibit{grid-template-columns:1fr 70px;padding-top:0}.ascii-playground{max-width:540px}.exhibit-index .visual-title{font-size:12px;margin:14px 0}.artist-wordmark{font-size:13.5vw;margin:40px 5% 0}.music-grid{grid-template-columns:1fr;gap:25px;padding-top:28px}.collection-title{font-size:clamp(28px,7vw,48px)}.release-grid{padding-top:28px}.coming-soon{font-size:48px!important}.media-heading{align-items:flex-start;font-size:10px}.media-heading p{max-width:65%;line-height:1.6}.media-section{padding-bottom:60px}.ascii-caption{flex-wrap:wrap}}
 @media(min-width:801px){.ascii-playground{max-width:min(650px,68svh)}.exhibit{min-height:0}.artist-wordmark{margin-top:54px}}
+
+.cover-ascii{max-width:none!important;background:#000;color:#fff;padding:16px}.cover-ascii .ascii-stage{background:#000}.cover-ascii .ascii-caption{color:#bbb}.cover-ascii .ascii-controls{border-color:#666}.cover-ascii .corner{color:#fff}

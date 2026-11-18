@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import AsciiPlayground from './ascii-playground';
 
 export default function Home() {
@@ -18,7 +17,7 @@ export default function Home() {
   <div className="index-line"><span>Ayala Alone Deer,</span><span>OFFICIAL SITE</span><span>© 2026</span></div>
   <section id="album" className="catalog section-space">
    <div className="section-label"><h2>1ST ALBUM</h2><span>APPLIA</span></div>
-   <div className="release-grid"><div className="real-cover"><Image unoptimized src="/ayala-cover.webp" width={1600} height={1600} alt="APPLIA — 鹿と人の顔が重なるジャケット"/></div><div className="release-details"><span className="catalog-code">Ayala Alone Deer, / 1ST ALBUM</span><h3 className="cover-title">APPLIA</h3><p className="coming-soon">COMING<br/>SOON</p></div></div>
+   <div className="release-grid"><div className="real-cover"><AsciiPlayground coverOnly/></div><div className="release-details"><span className="catalog-code">Ayala Alone Deer, / 1ST ALBUM</span><h3 className="cover-title">APPLIA</h3><p className="coming-soon">COMING<br/>SOON</p></div></div>
   </section>
   <section id="music" className="section-space music-section">
    <div className="section-label"><h2>01 / MUSIC</h2><span>RELEASE</span></div>
@@ -29,6 +28,6 @@ export default function Home() {
    <div className="media-heading"><p>Tokyo Community Radio — INTERVIEW</p><a className="text-link" href="https://www.youtube.com/watch?v=_2akbuwoqq0" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div>
    <div className="video"><iframe src="https://www.youtube-nocookie.com/embed/_2akbuwoqq0" title="Tokyo Community Radio インタビュー動画" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" allowFullScreen/></div>
   </section>
-  <footer><a href="#top" className="footer-brand">A/A</a><span>Ayala Alone Deer,<br/>OFFICIAL SITE</span><span>© 2026 Ayala Alone Deer,</span><a href="#top" className="text-link">TOP ↑</a></footer>
+  <footer><span aria-hidden="true" /><span>Ayala Alone Deer,<br/>OFFICIAL SITE</span><span>© 2026 Ayala Alone Deer,</span><a href="#top" className="text-link">TOP ↑</a></footer>
  </main>;
 }
