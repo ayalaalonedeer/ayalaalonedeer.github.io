@@ -1,42 +1,34 @@
 import Image from 'next/image';
-
-const STREAM_URL = 'https://linkco.re/Yvz4hFms';
-const VIDEO_ID = '_2akbuwoqq0';
+import AsciiPlayground from './ascii-playground';
 
 export default function Home() {
  return <main id="top">
+  <a className="skip" href="#music">コンテンツへ移動</a>
   <header className="site-header">
-   <a href="#top" className="header-name">Ayala Alone Deer,</a>
-   <nav aria-label="メインナビゲーション"><a href="#music">MUSIC</a><a href="#media">MEDIA</a></nav>
+   <a className="monogram" href="#top" aria-label="Ayala Alone Deer, トップ">A/A</a>
+   <span className="header-caption">Ayala Alone Deer,<br/>OFFICIAL SITE</span>
+   <nav aria-label="メインナビゲーション"><a href="#music"><small>01</small>MUSIC</a><a href="#media"><small>02</small>MEDIA</a></nav>
   </header>
-
-  <section className="page hero">
-   <Image unoptimized className="apple" src="/apple.webp" width="802" height="533" alt="半分に切られたりんごと包丁のモノクロ写真" priority/>
-   <h1>Ayala<br/>Alone Deer,</h1>
-   <p className="official">OFFICIAL SITE</p>
+  <section className="exhibit" aria-label="アーティストビジュアル">
+   <div className="exhibit-index"><span className="eyebrow">Ayala Alone Deer,</span><p className="visual-title">BODY → TEXT<br/>TEXT → BODY</p><a className="text-link" href="#album">1ST ALBUM ↗</a></div>
+   <AsciiPlayground/>
+   <div className="exhibit-note"><span className="edition">( A/A/D, )</span><p>OFFICIAL SITE</p><a href="#album" className="down-link" aria-label="アルバムへ">↓</a></div>
   </section>
-
-  <section className="page soon" aria-label="1stアルバム">
-   <Image unoptimized className="collage" src="/collage.webp" width="573" height="798" alt="" aria-hidden="true"/>
-   <p className="soon-label">1ST ALBUM</p>
-   <p className="soon-title">COMING<br/>SOON</p>
+  <h1 className="artist-wordmark"><span>Ayala</span><span>Alone Deer,</span></h1>
+  <div className="index-line"><span>Ayala Alone Deer,</span><span>OFFICIAL SITE</span><span>© 2026</span></div>
+  <section id="album" className="catalog section-space">
+   <div className="section-label"><h2>1ST ALBUM</h2><span>APPLIA</span></div>
+   <div className="release-grid"><div className="real-cover"><Image unoptimized src="/ayala-cover.webp" width={1600} height={1600} alt="APPLIA — 鹿と人の顔が重なるジャケット"/></div><div className="release-details"><span className="catalog-code">Ayala Alone Deer, / 1ST ALBUM</span><h3 className="cover-title">APPLIA</h3><p className="coming-soon">COMING<br/>SOON</p></div></div>
   </section>
-
-  <section id="music" className="block">
-   <h2>MUSIC</h2>
-   <p className="meta">Tokyo Community Radio<br/>2025.06.06 / TuneCore Japan</p>
-   <p className="release">SESSIONS COLLECTION VOL.3</p>
-   <p className="track"><span>M09</span> stillbody</p>
-   <a className="pill" href={STREAM_URL} target="_blank" rel="noopener noreferrer">Stream ↗</a>
+  <section id="music" className="section-space music-section">
+   <div className="section-label"><h2>01 / MUSIC</h2><span>RELEASE</span></div>
+   <div className="music-grid"><p className="catalog-code">Tokyo Community Radio<br/>2025.06.06 / TuneCore Japan</p><div><h3 className="collection-title">SESSIONS<br/>COLLECTION VOL.3</h3><p className="track">M09 <span>stillbody</span></p><a className="text-link" href="https://linkco.re/Yvz4hFms" target="_blank" rel="noopener noreferrer">Stream ↗</a></div></div>
   </section>
-
-  <section id="media" className="block">
-   <h2>MEDIA</h2>
-   <p className="meta">Tokyo Community Radio — INTERVIEW</p>
-   <div className="video"><iframe src={`https://www.youtube-nocookie.com/embed/${VIDEO_ID}`} title="Tokyo Community Radio インタビュー動画" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" allowFullScreen/></div>
-   <a className="pill" href={`https://www.youtube.com/watch?v=${VIDEO_ID}`} target="_blank" rel="noopener noreferrer">YouTube ↗</a>
+  <section id="media" className="section-space media-section">
+   <div className="section-label"><h2>02 / MEDIA</h2><span>INTERVIEW</span></div>
+   <div className="media-heading"><p>Tokyo Community Radio — INTERVIEW</p><a className="text-link" href="https://www.youtube.com/watch?v=_2akbuwoqq0" target="_blank" rel="noopener noreferrer">YouTube ↗</a></div>
+   <div className="video"><iframe src="https://www.youtube-nocookie.com/embed/_2akbuwoqq0" title="Tokyo Community Radio インタビュー動画" loading="lazy" allow="encrypted-media; picture-in-picture; web-share" allowFullScreen/></div>
   </section>
-
-  <footer>© 2026 Ayala Alone Deer,</footer>
+  <footer><a href="#top" className="footer-brand">A/A</a><span>Ayala Alone Deer,<br/>OFFICIAL SITE</span><span>© 2026 Ayala Alone Deer,</span><a href="#top" className="text-link">TOP ↑</a></footer>
  </main>;
 }
