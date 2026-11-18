@@ -165,3 +165,13 @@ body {
 @media(min-width:801px){.ascii-playground{max-width:min(650px,68svh)}.exhibit{min-height:0}.artist-wordmark{margin-top:54px}}
 
 .cover-ascii{max-width:none!important;background:#000;color:#fff;padding:16px}.cover-ascii .ascii-stage{background:#000}.cover-ascii .ascii-caption{color:#bbb}.cover-ascii .ascii-controls{border-color:#666}.cover-ascii .corner{color:#fff}
+
+/* Keep the album announcement clear of the following section at every width. */
+#album .release-details{display:flow-root;min-width:0}
+#album .coming-soon{margin:29px 0 0;padding-bottom:8px;line-height:1.08!important}
+#album .release-grid{padding-bottom:64px}
+#music{padding-top:64px}
+@media(max-width:800px){#album .release-grid{padding-bottom:40px}#music{padding-top:40px}}
+/* A percentage row gap overflows an auto-height stacked grid. */
+.release-grid{row-gap:48px;column-gap:10%}
+@media(max-width:800px){.release-grid{row-gap:30px}}
