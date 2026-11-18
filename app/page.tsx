@@ -5,7 +5,7 @@ export default function Home() {
  return <main id="top">
   <a className="skip" href="#music">コンテンツへ移動</a>
   <header className="site-header">
-   <a className="monogram" href="#top" aria-label="Ayala Alone Deer, トップ">A/A</a>
+   <span aria-hidden="true" />
    <span className="header-caption">Ayala Alone Deer,<br/>OFFICIAL SITE</span>
    <nav aria-label="メインナビゲーション"><a href="#music"><small>01</small>MUSIC</a><a href="#media"><small>02</small>MEDIA</a></nav>
   </header>
